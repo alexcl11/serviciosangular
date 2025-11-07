@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Personas StandAlone</h1>
+    <ul class="list-group">
+        @for(p of personas; track p){
+            <li class="list-group-item">{{p.Nombre}} - {{p.Email}}</li>
+        }
+    </ul>
+</div>
