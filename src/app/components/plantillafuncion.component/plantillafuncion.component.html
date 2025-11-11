@@ -1,0 +1,43 @@
+
+<div class="container w-25 my-3">
+    <h1>Plantilla múltiple</h1>
+    <form #selectFunciones = "ngForm" (ngSubmit) = "buscarPlantilla()">
+        <select class="form-select" name="selectFuncion" [(ngModel)]="selectFuncion" multiple>
+            <option value="" disabled>-- Selecciona varias funciones --</option>
+            @for(f of funciones; track f){
+                <option [ngValue] = "f">{{f}}</option>
+            }
+        </select>
+        <button class="btn btn-primary my-2">Buscar</button>
+    </form>
+</div>
+<div class="container">
+    @if(plantilla.length > 0){
+        <table class="table text-center">
+            <thead >
+                <tr>
+                    <th>ID Empleado</th>
+                    <th>ID Hospital</th>
+                    <th>ID Sala</th>
+                    <th>Apellido</th>
+                    <th>Función</th>
+                    <th>Turno</th>
+                    <th>Salario</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(p of plantilla; track p){
+                    <tr>
+                        <td>{{p.idEmpleado}}</td>
+                        <td>{{p.idHospital}}</td>
+                        <td>{{p.idSala}}</td>
+                        <td>{{p.apellido}}</td>
+                        <td>{{p.funcion}}</td>
+                        <td>{{p.turno}}</td>
+                        <td>{{p.salario}} €</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

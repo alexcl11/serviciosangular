@@ -9,6 +9,10 @@ import { provideHttpClient } from '@angular/common/http';
 import { PersonasapiComponent } from './components/personasapi.component/personasapi.component';
 import { ServicePersona } from './services/service.persona';
 import { PersonasstandaloneComponent } from './components/personasstandalone.component/personasstandalone.component';
+import { CochesComponent } from './components/coches.component/coches.component';
+import { PlantillafuncionsimpleComponent } from './components/plantillafuncionsimple.component/plantillafuncionsimple.component';
+import { FormsModule } from '@angular/forms';
+import { PlantillafuncionComponent } from './components/plantillafuncion.component/plantillafuncion.component';
 
 
 @NgModule({
@@ -17,11 +21,15 @@ import { PersonasstandaloneComponent } from './components/personasstandalone.com
     MenuComponent,
     HomeComponent,
     PersonasapiComponent,
+    CochesComponent,
+    PlantillafuncionsimpleComponent,
+    PlantillafuncionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PersonasstandaloneComponent
+    PersonasstandaloneComponent,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
